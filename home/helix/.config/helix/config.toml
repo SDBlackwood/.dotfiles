@@ -1,0 +1,23 @@
+theme = "onedark"
+
+[editor]
+mouse = false
+cursorline = true
+cursorcolumn = true
+line-number = "absolute"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 300
+
+[keys.insert]
+C-left = "move_prev_word_start"
+C-right = "move_next_word_start"
