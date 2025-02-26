@@ -1,0 +1,57 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+cmd+-",
+        "command": "workbench.action.navigatePreviousInEditLocations"
+    },
+    {
+        "key": "ctrl+cmd+=",
+        "command": "workbench.action.navigateForwardInEditLocations"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "cmd+k cmd+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "cmd+k cmd+right",
+        "command": "-workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+cmd+-",
+        "command": "workbench.action.navigateBackInEditLocations"
+    },
+    {
+        "key": "cmd+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "-workbench.action.newWindow"
+    },
+    {
+        "key": "alt+f12",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active && terminalFocus"
+    },
+    {
+        "key": "alt+f12",
+        "command": "-workbench.action.terminal.focus",
+        "when": "terminalHasBeenCreated && !terminalFocus || terminalProcessSupported && !terminalFocus"
+    },
+    {
+        "key": "alt+-",
+        "command": "workbench.action.navigateLast"
+    }
+]
