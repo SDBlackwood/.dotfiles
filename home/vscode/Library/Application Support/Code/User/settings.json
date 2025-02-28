@@ -51,5 +51,6 @@
       "vscodevim.vim": 1
     },
     "editor.minimap.enabled": false,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "editor.inlineSuggest.enabled": false
   }
