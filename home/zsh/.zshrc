@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -316,7 +316,7 @@ if [ "$funcstack[1]" = "_k9s" ]; then
 fi
 
 ###### ENV SETTINGS
-export EDITOR=nvim
+export EDITOR=hx
 export WEEKLY_NOTES_PATH="~/Workspace/work/weekly"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
@@ -367,3 +367,11 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 if [ -f "~/zsh.local" ]; then
    source "~/zsh.local"
 fi
+
+
+HELIX_RUNTIME=~/Workspace/helix/runtime
+export HELIX_RUNTIME=~/Workspace/helix/runtime
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"

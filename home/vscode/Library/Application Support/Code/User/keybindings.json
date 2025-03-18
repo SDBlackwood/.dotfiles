@@ -53,5 +53,10 @@
     {
         "key": "alt+-",
         "command": "workbench.action.navigateLast"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-workbench.action.debug.run",
+        "when": "!inDebugMode && !terminalFocus"
     }
 ]

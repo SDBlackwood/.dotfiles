@@ -22,5 +22,12 @@ after-delay.timeout = 300
 C-left = "move_prev_word_start"
 C-right = "move_next_word_start"
 
+[keys.normal]
+X = "extend_line_above"
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+C-y = [ ':sh rm -f /tmp/yazi-path', ':insert-output yazi %{buffer_name} --chooser-file=/tmp/yazi-path', ":open %sh{cat /tmp/yazi-path}", ":redraw" ]
+G = "goto_file_end"   
+
 [keys.normal.space]
 space = "file_picker"
