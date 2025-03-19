@@ -16,7 +16,7 @@ export TMPDIR=/tmp
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+export ZSH_THEME=robbyrussell
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -331,6 +331,8 @@ alias nv="nvim"
 alias tve='$EDITOR `tv`'
 
 
+
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
@@ -343,25 +345,9 @@ weekly () {
     $EDITOR "${WEEKLY_NOTES_PATH}/WB $(date -v-tuesday +%m%d%y).md"
 }
 
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Yazi setup
-[[ -s "/Users/scott.blackwood/.gvm/scripts/gvm" ]] && source "/Users/scott.blackwood/.gvm/scripts/gvm"
-
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
-
-FZF_ALT_C_COMMAND= source <(fzf --zsh)
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
 
 # LOCAL NON GIT CONFIG 
 if [ -f "~/zsh.local" ]; then
