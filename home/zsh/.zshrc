@@ -86,7 +86,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# User configuratio 
+
+HOSTNAME=$(hostname)
 
 # Update to your own AWS identity role
 export ADARGA_AWS_IDENTITY_ROLE="AdargaProductEngineer"

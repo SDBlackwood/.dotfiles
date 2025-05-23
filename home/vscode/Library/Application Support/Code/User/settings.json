@@ -1,9 +1,9 @@
 {
     "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
+      "*": true,
+      "plaintext": false,
+      "markdown": false,
+      "scminput": false
     },
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -11,10 +11,7 @@
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
+
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
       {
@@ -40,6 +37,27 @@
           "commands": [
               "workbench.action.files.save"
           ]
+      },
+      {
+          "before": [
+              "<leader>"
+          ],
+          "after": [
+              "<leader>"
+          ],
+          "commands": [
+              "workbench.action.quickOpen"
+          ]
+      },
+      {
+        "before": ["]", "d"],
+        "commands": ["editor.action.marker.nextInFiles"],
+        "silent": true
+      },
+      {
+          "before": ["[", "d"],
+          "commands": ["editor.action.marker.prevInFiles"],
+          "silent": true
       }
     ],
     "vim.leader": "<space>",
@@ -52,5 +70,14 @@
     },
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
-    "editor.inlineSuggest.enabled": false
+    "editor.inlineSuggest.enabled": true,
+    "go.toolsManagement.autoUpdate": true,
+    "git.openRepositoryInParentFolders": "never",
+    "vim.smartRelativeLine": true,
+    "workbench.startupEditor": "none",
+    "testing.automaticallyOpenTestResults": "neverOpen",
+    "testing.followRunningTest": true,
+    "go.testExplorer.showOutput": false,
+    "python.analysis.typeCheckingMode": "standard",
+    "editor.largeFileOptimizations": false
   }
